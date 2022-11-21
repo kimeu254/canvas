@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../models/objects.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class TextsPage extends StatefulWidget {
   const TextsPage({super.key});
@@ -75,14 +76,11 @@ class _DetailPageState extends State<DetailPage> {
           width: 1885,
           height: 782,
           child: InteractiveViewer(
-            child: Text(
-              widget.model.text.toString(),
-              style: TextStyle(
-                fontSize: widget.model.fontSize,
-                fontFamily: widget.model.fontFamily,
-                //height: widget.model.height,
-              ),
-            ),
+            child: Text(widget.model.text.toString(),
+                style: GoogleFonts.getFont(
+                  widget.model.fontFamily.toString(),
+                  fontSize: widget.model.fontSize,
+                )),
           ),
         ));
   }
