@@ -72,6 +72,8 @@ class _DetailPageState extends State<DetailPage> {
           child: InteractiveViewer(
               child: Image.network(
             widget.model.src.toString(),
+            height: widget.model.height,
+            width: widget.model.width,
           ))),
     );
   }

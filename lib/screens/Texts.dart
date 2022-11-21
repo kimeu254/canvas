@@ -34,7 +34,10 @@ class _TextsPageState extends State<TextsPage> {
                 child: Center(
                   child: Text(
                     element.text.toString(),
-                    style: TextStyle(),
+                    style: TextStyle(
+                      fontSize: element.fontSize,
+                      fontFamily: element.fontFamily.toString(),
+                    ),
                   ),
                 ),
               ),
@@ -72,12 +75,15 @@ class _DetailPageState extends State<DetailPage> {
           width: 1885,
           height: 782,
           child: InteractiveViewer(
-              child: Center(
             child: Text(
               widget.model.text.toString(),
-              style: const TextStyle(),
+              style: TextStyle(
+                fontSize: widget.model.fontSize,
+                fontFamily: widget.model.fontFamily,
+                //height: widget.model.height,
+              ),
             ),
-          )),
+          ),
         ));
   }
 }
